@@ -1,0 +1,111 @@
+# ===================================
+# macOS system files
+# ===================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*.swo
+
+# ===================================
+# Python
+# ===================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Package managers
+poetry.lock
+Pipfile.lock
+
+# ===================================
+# Jupyter / Colab
+# ===================================
+.ipynb_checkpoints/
+*.ipynb_convert/
+jupyter_execute/
+*.ipynb~
+
+# ===================================
+# Logs & runtime
+# ===================================
+*.log
+*.out
+*.err
+logs/
+wandb/
+mlruns/
+*.sqlite
+*.db
+
+# ===================================
+# Editors & IDEs
+# ===================================
+.vscode/
+.idea/
+*.iml
+
+# ===================================
+# Project-specific (ML/Deep Learning)
+# ===================================
+# Datasets
+data/
+datasets/
+*.tfrecord
+*.h5
+*.npz
+*.npy
+*.pkl
+*.csv
+*.tsv
+
+# Model checkpoints & outputs
+checkpoints/
+outputs/
+runs/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+
+# HuggingFace cache
+huggingface/
+hf_cache/
+transformers_cache/
+~/.cache/huggingface/
+
+# ===================================
+# Secrets & configs
+# ===================================
+*.env
+.env.*
+*.secret
+*.key
+*.pem
+config.json
+secrets.json
+

@@ -1,0 +1,44 @@
+# RoadTalker 🛣️🤖
+
+A research project on **Vision-Language Models (VLMs)** for traffic scene understanding.
+Built as part of my ML course final project and as a foundation for thesis research.
+
+## Goals
+- Explore image → text alignment with a **ViT + LLM bridge** (LLaVA-style MLP, later Q-Former).
+- Train on **traffic images** (BDD100K, UA-DETRAC) with auto-generated Q&A.
+- Demonstrate tasks:
+  - Vehicle counting
+  - Type classification (car, bus, truck, etc.)
+  - Color recognition
+  - Basic localization (boxes)
+
+## Structure
+road_talker/
+├── data/ # datasets (ignored by git)
+├── notebooks/ # exploration + demo notebooks
+├── models/ # model components (ViT, projector, LLM)
+├── train/ # training pipeline
+├── eval/ # evaluation scripts
+├── scripts/ # helper scripts
+├── configs/ # YAML configs
+├── utils/ # helper utils
+├── tests/ # unit tests
+
+## Setup
+```bash
+git clone https://github.com/lordaliH8/road_talker.git
+cd road_talker
+
+# create environment
+conda env create -f environment.yml
+conda activate roadstalker
+
+# or using pip
+pip install -r requirements.txt
+Quickstart
+Download dataset:
+bash scripts/prepare_bdd100k.sh
+Train with QLoRA:
+bash scripts/train_qlora.sh
+Run evaluation:
+bash scripts/eval.sh

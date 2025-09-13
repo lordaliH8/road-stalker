@@ -1,0 +1,27 @@
+# --- Paths and Directories ---
+dataset_path: "data/final_split_dataset_versatile"
+checkpoint_dir: "checkpoints/vlm_checkpoints"
+
+# --- Model Architecture ---
+model:
+  llm_name: "google/gemma-2b"
+  vision_embedding_dim: 768
+  llm_embedding_dim: 2048
+  projector_hidden_dim: 1024
+
+# --- LoRA (PEFT) Configuration ---
+lora:
+  r: 32 # INCREASED: Give the adapter more capacity to learn.
+  lora_alpha: 64 # CONVENTION: Keep alpha at 2x the rank.
+  lora_dropout: 0.05
+
+training:
+  epochs: 10 # INCREASED: Train for more epochs to allow for convergence.
+  batch_size: 4
+  learning_rate: 2e-5 # START HERE: A safe, small learning rate.
+  max_grad_norm: 1.0
+  mask_prompt_labels: True
+
+sampling:
+  max_train_samples: 12000 # CRITICAL: Train on the full dataset now.
+  max_val_samples: 1000

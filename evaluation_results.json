@@ -1,0 +1,2397 @@
+{
+    "metrics": {
+        "overall_accuracy_simple_qa": 0.661,
+        "per_category_accuracy": {
+            "Weather": 0.5476190476190477,
+            "Traffic Light Color": 0.34782608695652173,
+            "Object Presence": 0.7272727272727273
+        },
+        "object_presence_metrics": {
+            "confusion_matrix": {
+                "true_positive": 322,
+                "true_negative": 234,
+                "false_positive": 162,
+                "false_negative": 41
+            },
+            "precision": 0.6652892561983471,
+            "recall": 0.8870523415977961,
+            "f1_score": 0.7603305785123966
+        }
+    },
+    "incorrect_simple_predictions": [
+        {
+            "image": "bd75454a-69e7f645.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "clear",
+            "prediction": "ritrov ryzen ryzenheitssightlysightly provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato provato"
+        },
+        {
+            "image": "4558a1b0-a7e501f0.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "b27cd403-f2d087cc.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "126956a8-513d04c2.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "rainy",
+            "prediction": "yes"
+        },
+        {
+            "image": "bbf7e280-19aed161.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "snowy",
+            "prediction": "clear"
+        },
+        {
+            "image": "51ea0a48-dea5b4ee.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "7ff61f97-058a76ab.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "c936d348-99cf17b9.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "partly cloudy",
+            "prediction": "overcast"
+        },
+        {
+            "image": "8e720571-f5132884.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "54473ef1-6a37dd12.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "bf474631-c3a76c7d.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "3ce51ba2-96574724.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "there is no traffic in this night"
+        },
+        {
+            "image": "37c80ed9-808d1442.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "5187c895-bac630fb.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "b97b9ee8-8fbf044e.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "partly cloudy",
+            "prediction": "clear"
+        },
+        {
+            "image": "90a58aff-491b2522.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "2f0eccda-b9df18c7.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "red",
+            "prediction": "green"
+        },
+        {
+            "image": "111b87c0-aa7bdcb7.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "14306a74-b969c0dd.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "354702d7-f7a3c807.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "clear"
+        },
+        {
+            "image": "90b3cb2e-d66a6e6f.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "81610cd3-0d30da39.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a drivable area?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "c428e890-674ecc9d.jpg",
+            "category": "Object Presence",
+            "question": "Is there a rider visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "a3bc6078-722dfbfe.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "8be88685-3bd93faf.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "69244e4b-22ce2c3a.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "snowy",
+            "prediction": "clear"
+        },
+        {
+            "image": "46528f64-99d8de38.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "705c6dce-2f73d5f8.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "snowy",
+            "prediction": "clear"
+        },
+        {
+            "image": "60c8f5ef-21fe877a.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a train?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "19146696-880eaf49.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "a5c48331-05dc1cf7.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "025ecc28-3d894af1.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "11650cdd-0a96b31c.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "40a0e424-40b6f184.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "3c79d50a-785b6869.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "576c95a7-abde2f58.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "94304aa9-59d1ee2c.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "2534efb1-7996efcd.jpg",
+            "category": "Object Presence",
+            "question": "Is there a car visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "7b5368cd-95112d3f.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "c96299f2-8e89da2c.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "there is no traffic in this image"
+        },
+        {
+            "image": "33fc20c1-7d284c3a.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "green",
+            "prediction": "there is no traffic light in this image"
+        },
+        {
+            "image": "4cc4e7db-2791fa35.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "5ee342bd-a236cc6f.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "rainy",
+            "prediction": "overcast"
+        },
+        {
+            "image": "584a1c52-8a46bfe4.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic sign visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "17d4f1b8-aaa10d26.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a motor?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "c9fc208f-75876b0b.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "4dfe1b30-aca10059.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "70cc96e1-fdf9f7e1.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a traffic light?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "8e93d266-13e9e7a8.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "5a4fb1bd-beae3db7.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "there is no traffic in oct"
+        },
+        {
+            "image": "9d20e3f1-713d5669.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "clear",
+            "prediction": "overcast"
+        },
+        {
+            "image": "1b59aece-01d901e8.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "c65eb5d6-e90e41da.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "45ebc167-1e1a3abb.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "6b4fceba-8ba9d084.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a traffic sign?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "1189ae68-7ac199bd.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a lane?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "769136f0-f4909f03.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "260d2ebf-444a2a0f.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "4491d823-9cd3dff7.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "30b13eff-a4d1e869.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "6e094f33-d4d417d1.jpg",
+            "category": "Object Presence",
+            "question": "Is there a drivable area visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "1dea280f-1e16b5b0.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "there is no traffic light in this image"
+        },
+        {
+            "image": "6d19db4a-9de75119.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "ab12975c-abce86fe.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a rider?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "bf1a30f8-29c812b9.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "0eb82d73-0f1dd09d.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "14968e59-be7926f5.jpg",
+            "category": "Object Presence",
+            "question": "Is there a lane visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "3af28c80-6a3484ba.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "8b2ae7c5-703e1319.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a traffic light?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "860054e0-08efaa52.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "a90dabe6-9a423831.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "clear",
+            "prediction": "overcast"
+        },
+        {
+            "image": "83577f60-832df161.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "2c61087d-36569610.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "979b0259-84a6095b.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "green",
+            "prediction": "there is no image"
+        },
+        {
+            "image": "a01ff535-cdb88902.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "b59413ff-5885b827.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a rider?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "1a018823-4dbc9f07.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "partly cloudy",
+            "prediction": "clear"
+        },
+        {
+            "image": "c1f8d9b3-c550f84e.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "clear",
+            "prediction": "overcast"
+        },
+        {
+            "image": "7c1c84b0-55e83acd.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger henvisninger"
+        },
+        {
+            "image": "9577d7c3-ccb30ff7.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "7a24fe99-3069ad3f.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic sign visible in the image?",
+            "ground_truth": "no",
+            "prediction": "Niemand Niemandnoorgonorgonorgonorgonorgonorgonorgonorgonorgonorgonorgonorgonorgon limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba limba"
+        },
+        {
+            "image": "8efb6d54-71a1fd42.jpg",
+            "category": "Object Presence",
+            "question": "Is there a car visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "9b8d202f-0a73db22.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "537923f0-a1035429.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "68df04ae-6ddd814b.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a rider?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "ac117cd9-5964de1e.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "25f71599-984323a8.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "red"
+        },
+        {
+            "image": "93846b0e-0cba3db4.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "there is no traffic light in this image"
+        },
+        {
+            "image": "1a13d8a1-8df197a4.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "there is no traffic in oct"
+        },
+        {
+            "image": "19e1b250-e5604850.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic sign visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "80ed17ad-53c30e66.jpg",
+            "category": "Object Presence",
+            "question": "Is there a lane visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "ad09a5b3-c888b2eb.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "051ce827-ab278cb8.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "51a5434f-bc68e8df.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "rainy",
+            "prediction": "clear"
+        },
+        {
+            "image": "1d390c0b-76d88e48.jpg",
+            "category": "Object Presence",
+            "question": "Is there a train visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "41f7e52d-612d7739.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "72692e2b-aaab868f.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "47072934-a510d82e.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "17c78228-2fc1fc6f.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a car?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "7f396507-fee12326.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "5f4b8bdd-27bfde8d.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "99d188f8-50a8c5bc.jpg",
+            "category": "Object Presence",
+            "question": "Is there a motor visible in the image?",
+            "ground_truth": "no",
+            "prediction": "maneu furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt furt"
+        },
+        {
+            "image": "2e9f5b16-6ea7c9db.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "98a4fab5-9f0de891.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "clear"
+        },
+        {
+            "image": "847131ac-d52de9d1.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "a1a42dcd-daa8d404.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "partly cloudy",
+            "prediction": "overcast"
+        },
+        {
+            "image": "ac7b804f-f4a65b97.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "31ea9f59-43765cd8.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "7d446666-a35e6136.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "partly cloudy",
+            "prediction": "clear"
+        },
+        {
+            "image": "99cd070d-58d36ca4.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "2b8a0757-ca3f40b8.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "384a88d4-259f71f6.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "c35418da-e9e8e7dc.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "6f50ac18-5c97d737.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "c7053a50-d465ffa3.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "7189a73b-89be297d.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "partly cloudy",
+            "prediction": "clear"
+        },
+        {
+            "image": "10ced427-af655277.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "78029eb7-c58bc07d.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "clear",
+            "prediction": "overcast"
+        },
+        {
+            "image": "b9443e30-c9275e4a.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "87c77a57-6cc0de10.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "13fbfc19-fffb64a7.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "yes"
+        },
+        {
+            "image": "55b20e9a-34da2966.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "clear",
+            "prediction": "overcast"
+        },
+        {
+            "image": "4e44eb1a-b91e01c8.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "c7c2a783-d98d5909.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "322992fa-752ee4ef.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "2e0c27c7-23254a65.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a drivable area?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "c093f8be-b478e611.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a rider?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "718e38eb-9d776554.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a drivable area?",
+            "ground_truth": "yes",
+            "prediction": "saar"
+        },
+        {
+            "image": "5749b87a-7522a38c.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "07034b4f-2ffea8e6.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "clear"
+        },
+        {
+            "image": "bd6ca291-fe4a1b48.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "75479b10-f8f3ef67.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "3fc6dc81-79f79901.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "7b11cfe3-b3210ca2.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a lane?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "fdcb0d8d-c9648ca8.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "green",
+            "prediction": "red"
+        },
+        {
+            "image": "b3159650-0d7fbee8.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "red"
+        },
+        {
+            "image": "662b3e34-87daf4b9.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "48c36509-5247322d.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic sign visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "6b2527d1-99451132.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "9c4521e7-eb5d71fc.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "41da580c-51093500.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "c4b3ce3d-6e999bfc.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "35af3da5-3a060282.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "48421180-ff5d74c2.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "87e5565e-79d3e1cc.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "5cf7bc2e-4c476545.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "bbc357f2-ddaa5e79.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a rider?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "450f18a5-8ce16ded.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "b63fe296-4c1819fe.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "there is no traffic in this version"
+        },
+        {
+            "image": "c4160d08-c506293d.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "87c4cb4c-6ab7eb16.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "be39f3f1-2d48f83e.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "green",
+            "prediction": "red"
+        },
+        {
+            "image": "47019a35-76e2430d.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "68509061-983cdd3b.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "61c09a25-e8454e3c.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "there is no traffic in oct"
+        },
+        {
+            "image": "7e9d3327-bcda51e8.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "06eba8d5-f4b1dde6.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "8dfaad96-322d3aa9.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a traffic light?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "c1a5825c-4aa34c73.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a train?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "09a1bb0d-8acc7b23.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "b87b8bce-d9f8e55e.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "9f22e256-586671e1.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "2a04d6fc-e60f2efa.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a traffic sign?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "8cfd7869-c75d81c7.jpg",
+            "category": "Object Presence",
+            "question": "Is there a motor visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "6e981bf5-58bddeb4.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "red",
+            "prediction": "green"
+        },
+        {
+            "image": "97a37ec8-cf4915d9.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "7cdbd0bf-b2be4e56.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "a70f0390-570905fe.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "red",
+            "prediction": "there is no traffic in oct"
+        },
+        {
+            "image": "572d01f8-5d7629e0.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "3782b80f-d461fedd.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "snowy",
+            "prediction": "clear"
+        },
+        {
+            "image": "5b5ec8f9-d510949c.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a traffic light?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "8689c2d9-4e879240.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "06c3a194-2718f858.jpg",
+            "category": "Object Presence",
+            "question": "Is there a motor visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "8f973f63-b2fa98d7.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "20b732fc-15a95a8f.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "yellow",
+            "prediction": "there is no traffic light in this image"
+        },
+        {
+            "image": "bd1b8b79-ba219f33.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "rainy",
+            "prediction": "clear"
+        },
+        {
+            "image": "332a3774-16f32341.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic sign visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "15fdd664-367a4c86.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "ca28f275-08807c93.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "snowy",
+            "prediction": "clear"
+        },
+        {
+            "image": "b3e0345b-20d013f8.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "9d562bf8-042807c5.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "1f07428e-19b745fa.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a motor?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "708e765c-e40db676.jpg",
+            "category": "Object Presence",
+            "question": "Is there a rider visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "9a6c68f2-b0fc157d.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "227c4a9a-3ac6e824.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "9d630706-276db153.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "snowy",
+            "prediction": "overcast"
+        },
+        {
+            "image": "64f0c3ff-98d70ed3.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "green",
+            "prediction": "red"
+        },
+        {
+            "image": "6ef74617-2035c7b4.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "bisogna\u05d4\u05e1 chied chied chied chied chied chied chied chied\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647\u0627\u0644\u062f\u0631\u0627\u0633\u0647"
+        },
+        {
+            "image": "6312286b-f97e072e.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "75a92379-7e2047dd.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "6b86fb22-4807de78.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "be005230-7facbb3e.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "snowy",
+            "prediction": "clear"
+        },
+        {
+            "image": "a57caf7c-1f61e1f0.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "red",
+            "prediction": "there is no traffic in night"
+        },
+        {
+            "image": "068fa72c-657ca601.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "bab09f26-0e237051.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "18888802-64ac4fcf.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "a43c96e3-e4751a6e.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "3ad30390-a1c94b8f.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "rainy",
+            "prediction": "clear"
+        },
+        {
+            "image": "8a670142-83438e41.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "52099bfc-57ea382e.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "19ec0fe4-2a9358a7.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "there is no traffic in night"
+        },
+        {
+            "image": "30d60151-c2618b59.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "green",
+            "prediction": "red"
+        },
+        {
+            "image": "48b93885-b0126df1.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "a4945502-ccc9534a.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "1bd46dc9-dc0986da.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "c35a0c1c-33884693.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "2e598e8d-ab82f42e.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "partly cloudy",
+            "prediction": "clear"
+        },
+        {
+            "image": "813b0571-b8d26a5b.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "c0d678b8-de457e55.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "rainy",
+            "prediction": "clear"
+        },
+        {
+            "image": "0b91b26d-4974fb5b.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "3c39180d-d84dfdb4.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "8a067c4a-f0c2e166.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "clear",
+            "prediction": "overcast"
+        },
+        {
+            "image": "b788c509-9ba17da1.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "partly cloudy",
+            "prediction": "clear"
+        },
+        {
+            "image": "8e9ea4fe-9d734f42.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "414fe350-4f0f6e64.jpg",
+            "category": "Object Presence",
+            "question": "Is there a motor visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "9bcf3e24-fa60c235.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "66029444-4a9cf3d3.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "rainy",
+            "prediction": "partly clear"
+        },
+        {
+            "image": "40425847-ed8c09fa.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "4d5ebb46-5fb3f298.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "51a79f7c-055cecfe.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "partly cloudy",
+            "prediction": "clear"
+        },
+        {
+            "image": "c61cc09d-620a73cb.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "2d4ab1aa-962a0dfa.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "68590778-6a61cf95.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "green",
+            "prediction": "there is no traffic light in this image"
+        },
+        {
+            "image": "76db321f-d583d2cb.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "4864cad3-7179ad4f.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "94bdecb9-40a957dc.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "2b74bce3-d528c9fa.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "green",
+            "prediction": "red"
+        },
+        {
+            "image": "873d2ac9-4404cdf1.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "b36a5c73-437be32a.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "snowy",
+            "prediction": "clear"
+        },
+        {
+            "image": "4c4d7ba5-be30fd7c.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "green",
+            "prediction": "there is no traffic light in this image"
+        },
+        {
+            "image": "c56c7249-f70c6c33.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "30bff0e7-6c12847b.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "snowy",
+            "prediction": "clear"
+        },
+        {
+            "image": "0e9c8f20-3c6892dc.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "43737c68-941d73c4.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "there is no traffic in oct"
+        },
+        {
+            "image": "c60db1dc-73c1e986.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "red",
+            "prediction": "green"
+        },
+        {
+            "image": "1dc9b53b-1830c074.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "676b4196-ee1e51bb.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a motor?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "76514f35-7d23f316.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "4aecfef5-5fc1222e.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "0fb0f5a1-649652db.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "46cbc483-718a577e.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "6cf2d9eb-7c6bd71d.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "39a1e605-e3bd08ce.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic sign visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "2d4786e8-db557f48.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "517f4727-b7916c18.jpg",
+            "category": "Object Presence",
+            "question": "Is there a motor visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "4b254b22-8ce3604d.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "6ff5bc30-7caf8eb9.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "clear"
+        },
+        {
+            "image": "80af9d8e-10a2990d.jpg",
+            "category": "Object Presence",
+            "question": "Is there a motor visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "a3d613d7-470ce699.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "5f9ef3d7-d5035dd3.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "81234551-1acbe49d.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "15c7083a-a1d8aaa7.jpg",
+            "category": "Object Presence",
+            "question": "Is there a lane visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "224d0424-e93a76ba.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "23a22665-802b57a0.jpg",
+            "category": "Object Presence",
+            "question": "Is there a lane visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "201ab449-92e0d9ff.jpg",
+            "category": "Object Presence",
+            "question": "Is there a rider visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "c8f6f631-a1eb5133.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "ReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencojReferencoj"
+        },
+        {
+            "image": "22bc021f-ed352869.jpg",
+            "category": "Object Presence",
+            "question": "Is there a rider visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "6cdf8491-402f595d.jpg",
+            "category": "Object Presence",
+            "question": "Is there a drivable area visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "2f4fb244-68e29e26.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "snowy",
+            "prediction": "overcast"
+        },
+        {
+            "image": "2f490207-d208eaab.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "5e68fc57-cc4eb928.jpg",
+            "category": "Object Presence",
+            "question": "Is there a motor visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "455a19db-8ec65329.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "9dee0232-c850bfae.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "547856a5-a10dc5c5.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "43eafb44-7c5782dd.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "5e1e5afc-9d713b43.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a traffic sign?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "49495614-ec85d0e5.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "913b47b8-3cf1b886.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "26eee8ee-0ddc6ddc.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic sign visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "a0b98409-e2932d76.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "007aeb45-f9f5ac8c.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "7fbfccec-919ffba6.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "28b3996a-41d483a6.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "4acf1c3d-2e3da3f1.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a rider?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "7b8a2fca-5db2bdd6.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic sign visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "29655c8d-c528b8d8.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "3d2191a4-ad5d215b.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "5589def1-f752cadf.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a motor?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "97a3ce7b-67263caa.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "99d03746-0587026e.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "rainy",
+            "prediction": "clear"
+        },
+        {
+            "image": "82e35f62-a01dc25b.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "b6d0b46a-ec482777.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "13163948-7d0574d6.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "544f99a0-f50f3ae4.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "clear",
+            "prediction": "overcast"
+        },
+        {
+            "image": "c5617574-cca98859.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "72a415d4-461a4656.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "red",
+            "prediction": "green"
+        },
+        {
+            "image": "b2fe5d69-f31d4c9b.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a traffic light?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "7c4aee31-57306cc9.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "12719ee1-9e51cfbc.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "9668b616-b8db36f7.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "5ff99bb6-b136d9e5.jpg",
+            "category": "Object Presence",
+            "question": "Is there a rider visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "532fe939-dce6f96a.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "red",
+            "prediction": "clear chiesto immagini immagini images image"
+        },
+        {
+            "image": "823fb0cd-9ca38fef.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "rainy",
+            "prediction": "clear"
+        },
+        {
+            "image": "8dbc2c97-85c4297d.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a rider?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "ba9aff77-5e161292.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "0406b065-a759da9c.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "993d7127-e34f6c6c.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "clear",
+            "prediction": "overcast"
+        },
+        {
+            "image": "88a81658-7835e1e9.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "clear"
+        },
+        {
+            "image": "511f7fa2-9ad753b2.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "2b29e17b-deae45a6.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "be463595-760f4698.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a traffic light?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "02b1ab3d-e93996c2.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "c6cf9b39-8831232f.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a motor?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "57cc06cd-07412008.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "9ae15f5b-28ee4f2d.jpg",
+            "category": "Object Presence",
+            "question": "Is there a person visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "6822c08c-4552ac1e.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a motor?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "65a4de42-8582443f.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a train?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "667834f9-492ed3c7.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "25b6fde2-ad21a1c3.jpg",
+            "category": "Object Presence",
+            "question": "Is there a traffic light visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "8959b96d-dbfb392a.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "038db692-a3659ab7.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "49e4aa79-fc9daa10.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "3d27e4d0-93648fcb.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "3c8b8d73-36fceceb.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "red"
+        },
+        {
+            "image": "ca5f8e49-0df2e0a1.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "red"
+        },
+        {
+            "image": "a69cc4a5-6f82f327.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "502f4aa2-5fddfab7.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "green"
+        },
+        {
+            "image": "6b944240-651839e1.jpg",
+            "category": "Traffic Light Color",
+            "question": "What is the traffic light's color in the image?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "there is no traffic in the middle of the middle of the middle"
+        },
+        {
+            "image": "5f9cc30d-3d9b003e.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bus?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "8a562a98-d2867d94.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "snowy",
+            "prediction": "overcast"
+        },
+        {
+            "image": "abe73e8f-19e1457b.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "there is no traffic light in this image",
+            "prediction": "there is no traffic in oct"
+        },
+        {
+            "image": "9c9beb89-9704bec9.jpg",
+            "category": "Object Presence",
+            "question": "Is there a motor visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "12b84706-7a8821a4.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "1a71faae-d5f255fd.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a truck?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "0c774f7d-a8305951.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a person?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "bb6e6241-1fdd0e57.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bike visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "b6227ecd-ecc44823.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "5de32d4a-e39d66d8.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "clear",
+            "prediction": "overcast"
+        },
+        {
+            "image": "b11a76c4-d58641ae.jpg",
+            "category": "Weather",
+            "question": "How is the weather in the image?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "6efc4740-e9486631.jpg",
+            "category": "Object Presence",
+            "question": "Is there a bus visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "1e4b6c29-b6e70050.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "133a443d-21913418.jpg",
+            "category": "Object Presence",
+            "question": "Does the image contain a bike?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "b48f3f71-eec18320.jpg",
+            "category": "Object Presence",
+            "question": "Is there a rider visible in the image?",
+            "ground_truth": "no",
+            "prediction": "jwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjwsjws"
+        },
+        {
+            "image": "8bd9f0c0-28e8c5b1.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "green",
+            "prediction": "red"
+        },
+        {
+            "image": "38a0b340-e442393a.jpg",
+            "category": "Object Presence",
+            "question": "Is there a truck visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "79455c0a-f7477a05.jpg",
+            "category": "Object Presence",
+            "question": "Is there a rider visible in the image?",
+            "ground_truth": "yes",
+            "prediction": "no"
+        },
+        {
+            "image": "a28c82be-5273b707.jpg",
+            "category": "Weather",
+            "question": "What's the weather like in this scene?",
+            "ground_truth": "overcast",
+            "prediction": "clear"
+        },
+        {
+            "image": "49c3c0b4-331118ab.jpg",
+            "category": "Object Presence",
+            "question": "Is there a motor visible in the image?",
+            "ground_truth": "no",
+            "prediction": "yes"
+        },
+        {
+            "image": "943a830f-6e2ff84c.jpg",
+            "category": "Traffic Light Color",
+            "question": "What color is the traffic light showing?",
+            "ground_truth": "red",
+            "prediction": "there is no traffic in this image"
+        }
+    ],
+    "generative_predictions_and_references": []
+}

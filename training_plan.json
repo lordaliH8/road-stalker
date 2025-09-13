@@ -1,0 +1,71 @@
+{
+    "training_parameters": {
+        "dataset_path": "data/final_split_dataset_versatile",
+        "checkpoint_dir": "checkpoints/vlm_checkpoints",
+        "model": {
+            "llm_name": "google/gemma-2b",
+            "vision_embedding_dim": 768,
+            "llm_embedding_dim": 2048,
+            "projector_hidden_dim": 1024
+        },
+        "lora": {
+            "r": 32,
+            "lora_alpha": 64,
+            "lora_dropout": 0.05
+        },
+        "training": {
+            "epochs": 10,
+            "batch_size": 4,
+            "learning_rate": "2e-5",
+            "max_grad_norm": 1.0,
+            "mask_prompt_labels": true
+        },
+        "sampling": {
+            "max_train_samples": null,
+            "max_val_samples": null
+        }
+    },
+    "execution_details": {
+        "timestamp_utc": "2025-09-13T03:02:05.855371",
+        "device": "mps"
+    },
+    "dataset_summary": {
+        "total_train_qa_pairs": 12000,
+        "total_val_qa_pairs": 2000,
+        "train_batch_size": 4,
+        "val_batch_size": 4,
+        "batches_per_train_epoch": 3000
+    },
+    "data_samples": {
+        "note": "Showing the first few QA pairs from the training set to verify data structure.",
+        "train_samples": [
+            {
+                "question": "Does the image contain a truck?",
+                "answer": "no"
+            },
+            {
+                "question": "Does the image contain a traffic light?",
+                "answer": "no"
+            },
+            {
+                "question": "Does the image contain a traffic light?",
+                "answer": "yes"
+            },
+            {
+                "question": "Does the image contain a bus?",
+                "answer": "no"
+            },
+            {
+                "question": "Does the image contain a car?",
+                "answer": "yes"
+            }
+        ]
+    },
+    "training_logic": {
+        "total_epochs": 10,
+        "optimizer": "Adam",
+        "learning_rate": "2e-5",
+        "loss_calculation_note": "Loss is calculated only on answer tokens because mask_prompt_labels is set to True. This is critical for stability.",
+        "checkpointing": "Model checkpoints (projector and LoRA adapters) are saved to 'checkpoints/vlm_checkpoints' whenever validation loss improves."
+    }
+}

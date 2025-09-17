@@ -1,132 +1,131 @@
-VLM Training Framework for City Scenery VQA
-This repository provides a complete framework for training a mini Vision-Language Model (VLM) on the BDD100K dataset for a simple Visual Question Answering (VQA) task focused on city scenery images.
+Visual Language Model (VLM) Framework for Simple VQA on City Scenery Images
+This repository provides a Visual Language Model (VLM) framework for training a mini VLM on the BDD100k dataset for simple Visual Question Answering (VQA) tasks on city scenery images. The framework supports both classical MLP and quantum neural network (QNN) based projectors for translating image embeddings to the language model.
+Prerequisites
 
-The framework handles the entire pipeline, from data preparation and analysis to training, health checks, and evaluation. It offers two distinct architectural approaches for projecting vision embeddings into the language model's space: a classical MLP projector and an experimental Quantum Neural Network (QNN) based projector.
+Download the Dataset:
 
-🏗️ Architectural Approaches
-This repository contains two primary branches, each implementing a different projector module to translate image embeddings for the Large Language Model (LLM).
+Download the BDD100k dataset.
+Place the dataset under the /data directory in the root of the project.
 
-main branch: Implements a classical Multi-Layer Perceptron (MLP) as the projector. This is the standard and most common approach.
-q_projector_injection branch: Implements a Quantum Neural Network (QNN) based projector. This experimental approach explores the potential of quantum machine learning for the vision-language translation task.
-The setup and training instructions are nearly identical for both branches. Choose the branch that aligns with your research or performance goals before you begin.
 
-🚀 Getting Started
-1. Download the Dataset
-First, download the BDD100K dataset from the official website. Once downloaded, place the image and label files under a /data directory in the root of this project.
+Set Up Python Environment:
 
-The expected directory structure should be:
+Create a Python virtual environment.
+Install dependencies by running:pip install -r requirements.txt
 
-code
-Text
-.
-├── data/
-│   ├── bdd100k_images/
-│   └── bdd100k_labels/
-├── data_wizard/
-├── train/
-└── README.md
-2. Install Dependencies
-Create a Python environment and install the required packages using the requirements.txt file.
 
-code
-Bash
-# Create and activate a new Python environment (e.g., using venv)
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-# Install dependencies from the requirements file
-pip install -r requirements.txt
-⚙️ Data Preparation Workflow
-These scripts process the raw BDD100K labels, generate Q&A pairs, create image embeddings, and split the data for training. Run them in the specified order.
 
-Step 1: Prepare and Simplify Labels
-This script merges the raw dataset labels and creates a simplified, consolidated version tailored for our VQA task.
 
-code
-Bash
-python -m data_wizard.prep
-Step 2: Build the Full Dataset
-This comprehensive script performs several key actions:
+Data Preparation
 
-Runs inference using OpenAI's CLIP model to generate embeddings for all images.
-Creates simple and versatile Question-Answer pairs based on the simplified labels.
-Splits the data into train, test, and val sets.
-Generates a qa.json file and saves image embeddings for each data split.
-code
-Bash
+Merge and Simplify Labels:
+
+Run the following command to merge the dataset labels and create a simplified version for VQA tasks:python -m data_wizard.prep
+
+
+
+
+Build Dataset:
+
+Run the following command to:
+Generate image embeddings using OpenAI/CLIP.
+Create versatile QA pairs for the dataset.
+Split the dataset into train, test, and validation sets, along with corresponding qa.json files and image embeddings.
+
 python -m data_wizard.build_dataset
-Step 3: (Optional) Analyze the Dataset
-To analyze the final, refined version of your dataset for quality and distribution, run the following command:
 
-code
-Bash
-python -m data_wizard.analyze_qa
-🤖 Model Training
-1. Configure Your Training Run
-Before starting, set up your training parameters in the config.yml file located in the project's root directory. The training module will automatically load its settings from this file.
 
-Below is a sample config.yml with explanations:
 
-code
-Yaml
-# --- Paths and Directories ---
+
+Analyze Dataset:
+
+To analyze the refined dataset, run:python -m data_wizard.analyze_qa
+
+
+
+
+
+Training Configuration
+Before training, configure the config.yml file in the root directory. Below is a sample configuration:
+--- Paths and Directories ---
 dataset_path: "data/final_split_dataset_versatile"
 checkpoint_dir: "checkpoints/qvlm_checkpoints"
 
-# --- Model Architecture ---
+--- Model Architecture ---
 model:
   llm_name: "google/gemma-2b"
-  vision_embedding_dim: 768  # For CLIP ViT-B/32
-  llm_embedding_dim: 2048     # For Gemma-2B
+  vision_embedding_dim: 768
+  llm_embedding_dim: 2048
   projector_hidden_dim: 1024
 
-# --- LoRA (PEFT) Configuration ---
+--- LoRA (PEFT) Configuration ---
 lora:
-  r: 32               # LoRA rank
-  lora_alpha: 64      # LoRA alpha (conventionally 2 * r)
+  r: 32 # INCREASED: Give the adapter more capacity to learn.
+  lora_alpha: 64 # CONVENTION: Keep alpha at 2x the rank.
   lora_dropout: 0.05
 
-# --- Training Hyperparameters ---
+--- Training ---
 training:
-  epochs: 5
+  epochs: 5 # INCREASED: Train for more epochs to allow for convergence.
   batch_size: 4
-  learning_rate: 2e-5 # A common starting learning rate
-  max_grad_norm: 1.0  # Gradient clipping
+  learning_rate: 2e-5 # START HERE: A safe, small learning rate.
+  max_grad_norm: 1.0
   mask_prompt_labels: True
 
-# --- Data Sampling ---
+--- Sampling ---
 sampling:
-  max_train_samples: 12000 # Use null or a high number for the full dataset
+  max_train_samples: 12000 # CRITICAL: Train on the full dataset now.
   max_val_samples: 2000
 
-# --- Quantum Projector Module (QML) ---
-# NOTE: This section is only used by the `q_projector_injection` branch
+--- QML ---
 qml:
   enabled: true
   num_qubits: 16
-2. Run a Pipeline Health Check (Recommended)
-Before launching a full training run, validate your entire workflow by training on a single batch. This will quickly highlight any configuration issues or bugs.
 
-code
-Bash
-python -m train.health_check
-The script will print meaningful results upon success or detailed errors in case of failure.
+You can adjust the training configuration to suit your preferences, and the training module will handle the changes.
+Training
 
-3. Start Training
-Launch the main training interface with the following command:
+Start Training:
 
-code
-Bash
-python -m train.train_interface
-This process will:
+Run the training interface to begin training:python -m train.train_interface
 
-Start the training loop based on your config.yml.
-Create a training_plan.json file for analysis and progress tracking.
-Save the latest model checkpoint periodically to the directory specified in checkpoint_dir.
-📈 Evaluation
-To evaluate the performance of your best-trained model, run the evaluation script. This will load the latest checkpoint from your training run and perform inference on the test set.
 
-code
-Bash
-python -m train.eval
-Upon completion, the script will generate a JSON summary file containing key performance metrics and a list of failed Q&A pairs, which is useful for detailed error analysis.
+This will:
+Start the training process.
+Create a training plan JSON file for analysis and health checks.
+Save the latest checkpoint in the checkpoint_dir specified in config.yml.
+
+
+
+
+Health Check:
+
+To validate the training pipeline, run a single batch and check for meaningful results or errors:python -m train.health_check
+
+
+
+
+
+Evaluation
+To evaluate the trained model:
+
+Run the following command to perform inference on the latest checkpoint and generate a JSON summary of metrics and failed QAs:python -m train.eval
+
+
+
+Training Approaches
+This repository supports two approaches for training the VLM on the BDD100k dataset:
+
+Classical MLP Projector:
+
+Use the main branch for training with a classical MLP as the projector between image embeddings and the language model.
+
+
+Quantum Neural Network (QNN) Projector:
+
+Use the q_projector_injection branch to train with a QNN-based projector for the translation between image embeddings and the language model.
+
+
+
+The training instructions remain the same for both branches.

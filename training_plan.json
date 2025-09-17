@@ -1,7 +1,7 @@
 {
     "training_parameters": {
         "dataset_path": "data/final_split_dataset_versatile",
-        "checkpoint_dir": "checkpoints/vlm_checkpoints",
+        "checkpoint_dir": "checkpoints/qvlm_checkpoints",
         "model": {
             "llm_name": "google/gemma-2b",
             "vision_embedding_dim": 768,
@@ -14,19 +14,23 @@
             "lora_dropout": 0.05
         },
         "training": {
-            "epochs": 10,
+            "epochs": 5,
             "batch_size": 4,
             "learning_rate": "2e-5",
             "max_grad_norm": 1.0,
             "mask_prompt_labels": true
         },
         "sampling": {
-            "max_train_samples": null,
-            "max_val_samples": null
+            "max_train_samples": 12000,
+            "max_val_samples": 2000
+        },
+        "qml": {
+            "enabled": true,
+            "num_qubits": 16
         }
     },
     "execution_details": {
-        "timestamp_utc": "2025-09-13T03:02:05.855371",
+        "timestamp_utc": "2025-09-14T00:25:50.480962",
         "device": "mps"
     },
     "dataset_summary": {
@@ -40,32 +44,32 @@
         "note": "Showing the first few QA pairs from the training set to verify data structure.",
         "train_samples": [
             {
-                "question": "Does the image contain a truck?",
-                "answer": "no"
-            },
-            {
-                "question": "Does the image contain a traffic light?",
-                "answer": "no"
-            },
-            {
-                "question": "Does the image contain a traffic light?",
+                "question": "Is there a lane visible in the image?",
                 "answer": "yes"
             },
             {
-                "question": "Does the image contain a bus?",
+                "question": "Does the image contain a bike?",
                 "answer": "no"
             },
             {
-                "question": "Does the image contain a car?",
+                "question": "Is there a truck visible in the image?",
+                "answer": "yes"
+            },
+            {
+                "question": "Does the image contain a train?",
+                "answer": "no"
+            },
+            {
+                "question": "Is there a traffic light visible in the image?",
                 "answer": "yes"
             }
         ]
     },
     "training_logic": {
-        "total_epochs": 10,
+        "total_epochs": 5,
         "optimizer": "Adam",
         "learning_rate": "2e-5",
         "loss_calculation_note": "Loss is calculated only on answer tokens because mask_prompt_labels is set to True. This is critical for stability.",
-        "checkpointing": "Model checkpoints (projector and LoRA adapters) are saved to 'checkpoints/vlm_checkpoints' whenever validation loss improves."
+        "checkpointing": "Model checkpoints (projector and LoRA adapters) are saved to 'checkpoints/qvlm_checkpoints' whenever validation loss improves."
     }
 }

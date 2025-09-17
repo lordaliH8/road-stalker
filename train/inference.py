@@ -3,18 +3,16 @@ import torch
 import yaml
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
-from train.trainer import VLM  # We still need the VLM class definition for the tokenizer
 
+# Import our custom classes from the trainer module
+from train.trainer import VLM, QuantumProjector 
+
+# ANSI color codes
 class Colors:
-    GREEN = '\033[92m'
-    BLUE = '\033[94m'
-    HEADER = '\033[95m'
-    ENDC = '\033[0m'
-    YELLOW = '\033[93m'
-    RED = '\033[91m'
+    GREEN = '\033[92m'; BLUE = '\033[94m'; HEADER = '\033[95m'; ENDC = '\033[0m'; YELLOW = '\033[93m'; RED = '\033[91m'
 
 class VLMInference:
-    def __init__(self, config_path='config.yml', checkpoint_dir='vlm_checkpoints'):
+    def __init__(self, config_path='config.yml', checkpoint_dir='checkpoints/vlm_checkpoints'):
         print(f"{Colors.HEADER}--- Initializing VLM for Inference ---{Colors.ENDC}")
         
         with open(config_path, 'r') as f:
@@ -25,22 +23,35 @@ class VLMInference:
         else: self.device = "cpu"
         print(f"Using device: {self.device}")
 
-        self._load_model_and_adapters(checkpoint_dir)
+        # --- CORRECTED INITIALIZATION ORDER ---
+        # 1. Load tokenizer first, as we need its size.
         self._load_tokenizer()
+        # 2. Then, load the model and adapters, using the tokenizer's info.
+        self._load_model_and_adapters(checkpoint_dir)
         
-        # --- THE FIX IS HERE ---
-        # Set both model components to evaluation mode individually.
         self.llm.eval()
         self.projector.eval()
         
         print(f"{Colors.GREEN}--- Initialization Complete ---{Colors.ENDC}")
 
+    def _load_tokenizer(self):
+        # Use the static helper method to ensure tokenizer is identical to training
+        self.tokenizer = VLM.get_tokenizer(self.config['model']['llm_name'])
+
     def _load_model_and_adapters(self, checkpoint_dir):
+        # Step A: Load the BASE language model
         base_llm = AutoModelForCausalLM.from_pretrained(
             self.config['model']['llm_name'],
             dtype=torch.bfloat16
         )
         
+        # --- THE DEFINITIVE FIX ---
+        # Step B: Resize the token embeddings to match the tokenizer, which now includes '<image>'.
+        # This MUST be done before loading the adapters.
+        base_llm.resize_token_embeddings(len(self.tokenizer))
+        print(f"Resized model vocabulary to {len(self.tokenizer)} to accommodate special tokens.")
+        
+        # Step C: NOW, load the trained LoRA adapters onto the correctly-sized base model
         adapter_path = os.path.join(checkpoint_dir, 'best_llm_adapters')
         if not os.path.isdir(adapter_path):
             raise FileNotFoundError(f"LLM adapters not found at: {adapter_path}")
@@ -48,23 +59,32 @@ class VLMInference:
         self.llm = PeftModel.from_pretrained(base_llm, adapter_path)
         print("Base LLM and trained adapters loaded successfully.")
         
-        self.projector = torch.nn.Sequential(
-            torch.nn.Linear(self.config['model']['vision_embedding_dim'], self.config['model']['projector_hidden_dim']),
-            torch.nn.GELU(),
-            torch.nn.Linear(self.config['model']['projector_hidden_dim'], self.config['model']['llm_embedding_dim'])
-        ).to(self.device).to(torch.bfloat16)
-        
+        # Step D: Instantiate and load the projector
+        is_qml = self.config.get('qml', {}).get('enabled', False)
+        if is_qml:
+            print("Instantiating Quantum Projector...")
+            self.projector = QuantumProjector(
+                input_dim=self.config['model']['vision_embedding_dim'],
+                output_dim=self.config['model']['llm_embedding_dim'],
+                num_qubits=self.config['qml']['num_qubits']
+            )
+        else:
+            print("Instantiating Classical Projector...")
+            self.projector = torch.nn.Sequential(
+                torch.nn.Linear(self.config['model']['vision_embedding_dim'], self.config['model']['projector_hidden_dim']),
+                torch.nn.GELU(),
+                torch.nn.Linear(self.config['model']['projector_hidden_dim'], self.config['model']['llm_embedding_dim'])
+            )
+
         projector_path = os.path.join(checkpoint_dir, 'best_projector.pth')
         if not os.path.exists(projector_path):
             raise FileNotFoundError(f"Projector checkpoint not found at: {projector_path}")
         
         self.projector.load_state_dict(torch.load(projector_path, map_location=self.device))
+        self.projector.to(self.device).to(torch.bfloat16)
         print("Projector weights loaded successfully.")
 
         self.llm.to(self.device)
-
-    def _load_tokenizer(self):
-        self.tokenizer = VLM.get_tokenizer(self.config['model']['llm_name'])
 
     def answer_question(self, image_embedding_path, question):
         if not os.path.exists(image_embedding_path):
@@ -92,29 +112,26 @@ class VLMInference:
         answer_start_index = full_decoded_text.find("Answer: ")
         if answer_start_index != -1:
             answer = full_decoded_text[answer_start_index + len("Answer: "):].strip()
-        else: # Fallback if "Answer: " is not in the output
+        else:
             answer = full_decoded_text.strip()
 
         return answer
 
 if __name__ == '__main__':
-    # --- CONFIGURATION ---
-    CHECKPOINT_DIR = 'checkpoints/vlm_checkpoints'
+    CHECKPOINT_DIR = 'checkpoints/qvlm_checkpoints'
+    CONFIG_FILE = 'config.yml'
     TEST_DATA_DIR = 'data/final_split_dataset_versatile/test/embeddings'
     
-    # --- SCRIPT EXECUTION ---
     try:
-        inference_engine = VLMInference(checkpoint_dir=CHECKPOINT_DIR)
+        inference_engine = VLMInference(config_path=CONFIG_FILE, checkpoint_dir=CHECKPOINT_DIR)
     
-        # Find a sample from the test set to ask a question about
-        sample_embedding_name = '0ac90ac0-37cbb7cc.pt' # You can change this to any file in your test set
+        sample_embedding_name = '000e0252-8523a4a9.pt'
         sample_embedding_path = os.path.join(TEST_DATA_DIR, sample_embedding_name)
         
         questions = [
             "Is there a car in the image?",
             "What is the color of the traffic light?",
             "How is the weather in this scene?",
-            # "What are the objects in the image?"
         ]
         
         print(f"\n{Colors.BLUE}--- Asking questions about image: {sample_embedding_name} ---{Colors.ENDC}")
@@ -126,4 +143,6 @@ if __name__ == '__main__':
     except FileNotFoundError as e:
         print(f"\n{Colors.RED}FATAL ERROR: A required file or directory was not found.{Colors.ENDC}")
         print(f"{Colors.YELLOW}{e}{Colors.ENDC}")
-        print(f"{Colors.YELLOW}Please ensure your checkpoint and test data directories are correct.{Colors.ENDC}")
+    except Exception as e:
+        print(f"\n{Colors.RED}An unexpected error occurred:{Colors.ENDC}")
+        print(f"{Colors.YELLOW}{e}{Colors.ENDC}")

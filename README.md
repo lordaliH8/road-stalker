@@ -130,4 +130,4 @@ Use the `main` branch for training with a classical MLP as the projector between
 Use the `q_projector_injection` branch to train with a QNN-based projector for the translation between image embeddings and the language model.
 
 The training instructions remain the same for both branches.
-```
+
